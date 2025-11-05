@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <!-- Google Fonts (professional look) -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+
+<style>
+  body {
+    background-color: #C8A2C8; /* lilac background */
+    color: #000; /* keep general text black */
+    font-family: Arial, sans-serif;
+  }
+
+  h1, h2, h3 {
+    color: #4B0082; /* deep purple for headers */
+    font-family: Georgia, serif; /* professional look */
+  }
+</style>
+
+
+
+
+
+
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Sheryl Zhang — Journalism portfolio: reporting, data viz, audio, video, class projects." />
+  <title>Sheryl Zhang — Journalism Portfolio</title>
+
+  <!-- Basic theming + responsive CSS -->
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#1a1a1a;
+      --muted:#616161;
+      --accent:#0066cc;
+      --card:#f8f8f8;
+      --max-width:1100px;
+      --gap:1.25rem;
+      --focus: 3px solid #ffbf47; /* visible focus */
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.45;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:1rem;
+      display:flex;
+      justify-content:center;
+    }
+
+    .page{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    /* skip link */
+    .skip-link{
+      position:absolute;
+      left:-999px;
+      top:auto;
+      width:1px;
+      height:1px;
+      overflow:hidden;
+    }
+    .skip-link:focus{
+      left:1rem;
+      top:1rem;
+      width:auto;
+      height:auto;
+      padding:.5rem .75rem;
+      background:#000;
+      color:#fff;
+      border-radius:4px;
+      z-index:1000;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:var(--gap);
+      margin-bottom:1rem;
+    }
+    .brand{
+      display:flex;
+      gap:.75rem;
+      align-items:center;
+    }
+    .brand h1{
+      font-size:1.25rem;
+      margin:0;
+    }
+    nav{
+      display:flex;
+      gap:.5rem;
+      align-items:center;
+    }
+    nav a{
+      text-decoration:none;
+      color:var(--accent);
+      padding:.35rem .5rem;
+      border-radius:6px;
+    }
+    nav a:focus-visible{ outline:var(--focus); outline-offset:3px; }
+
+    .hero{
+      display:grid;
+      grid-template-columns: 1fr 220px;
+      gap:var(--gap);
+      align-items:start;
+      margin-bottom:1.25rem;
+    }
+
+    /* about card */
+    .about{
+      background:var(--card);
+      padding:1rem;
+      border-radius:10px;
+    }
+    figure.headshot{
+      margin:0;
+      text-align:center;
+    }
+    figure.headshot img{
+      width:160px;
+      height:160px;
+      object-fit:cover;
+      border-radius:50%;
+      display:block;
+      margin:0 auto;
+    }
+    figure.headshot figcaption{
+      font-size:.9rem;
+      color:var(--muted);
+      margin-top:.5rem;
+    }
+
+    /* work grid */
+    section.work-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:1rem;
+      margin-bottom:1rem;
+    }
+
+    article.card{
+      background:#fff;
+      border:1px solid #e6e6e6;
+      padding:1rem;
+      border-radius:8px;
+    }
+    .card h3{ margin:0 0 .35rem 0; font-size:1.05rem;}
+    .meta{ font-size:.85rem; color:var(--muted); margin-bottom:.5rem;}
+    .deck{ margin:0 0 .5rem 0; color:#222;}
+    .tags{ display:flex; gap:.4rem; flex-wrap:wrap; margin-top:.5rem;}
+    .tag{ font-size:.75rem; background:#eef6ff; color:var(--accent); padding:.25rem .45rem; border-radius:999px; }
+
+    /* projects area */
+    .projects{
+      background:var(--card);
+      padding:1rem;
+      border-radius:10px;
+      margin-bottom:1rem;
+    }
+
+    /* resume + contact */
+    .two-col{
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:var(--gap);
+      margin-bottom:1rem;
+    }
+
+    a.button{
+      display:inline-block;
+      padding:.5rem .75rem;
+      background:var(--accent);
+      color:#fff;
+      text-decoration:none;
+      border-radius:8px;
+    }
+    a.button:focus-visible{ outline:var(--focus); outline-offset:3px; }
+
+    footer{
+      font-size:.85rem;
+      color:var(--muted);
+      padding:1rem 0;
+      border-top:1px solid #eee;
+      margin-top:1rem;
+    }
+
+    /* focus for other interactive elements */
+    button:focus, a:focus { outline:var(--focus); outline-offset:3px; }
+
+    /* responsive tweaks */
+    @media (max-width:880px){
+      .hero{ grid-template-columns: 1fr; }
+      .two-col{ grid-template-columns:1fr; }
+    }
+    @media (max-width:420px){
+      body{ padding:.5rem; }
+      .brand h1{ font-size:1rem; }
+      nav a{ font-size:.95rem; padding:.25rem .4rem; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="page">
+
+    <!-- Header / Nav -->
+    <header>
+      <div class="brand">
+        <h1 id="site-title">Sheryl Zhang</h1>
+        <div style="color:var(--muted);font-size:.95rem">Student Journalist | Beat: Environment & Culture</div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#work">Selected Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main" tabindex="-1">
+
+      <!-- About -->
+      <section id="about" class="hero" aria-labelledby="about-heading">
+        <div class="about">
+          <h2 id="about-heading">About</h2>
+          <p>Hello — I’m <strong>Sheryl Zhang</strong>, a journalism student at Medill focusing on environmental reporting, community stories, and data-driven features. I produce longform stories, short multimedia clips, data visualizations, and audio pieces. I’m interested in climate justice, immigrant narratives, and cross-cultural storytelling.</p>
+
+          <h3>Beat & interests</h3>
+          <ul>
+            <li>Environment & climate impacts</li>
+            <li>Immigrant & identity reporting</li>
+            <li>Data visualization & audio storytelling</li>
+          </ul>
+        </div>
+
+        <!-- Headshot -->
+        <aside>
+          <figure class="headshot">
+            <!-- Replace with your headshot. Good alt text: describe appearance + role -->
+            <img src="https://via.placeholder.com/320" alt="Headshot of Sheryl Zhang smiling, chest-up portrait, wearing a denim jacket." width="160" height="160">
+            <figcaption>Sheryl Zhang — Student Journalist</figcaption>
+          </figure>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:.75rem;">
+            Based in Chicago. Available for freelance reporting and multimedia projects.
+          </p>
+        </aside>
+      </section>
+
+      <!-- Selected Work -->
+      <section id="work" aria-labelledby="work-heading">
+        <h2 id="work-heading">Selected Work</h2>
+
+        <p style="color:var(--muted);margin-top:0;margin-bottom:.75rem">Below are sample card templates — replace with your real clips (3–6 items recommended).</p>
+
+        <section class="work-grid" aria-label="Selected work list">
+          <!-- Card 1 -->
+          <article class="card" aria-labelledby="w1">
+            <h3 id="w1"><a href="#" target="_blank">Saltmarsh Sparrow’s Vanishing Song</a></h3>
+            <div class="meta">Reporter — The Carolina Ledger • Oct 2024</div>
+            <p class="deck">A longform feature on sea-level rise and the fragile habitat of the Saltmarsh Sparrow. I collected 7 years of local monitoring data and interviewed conservation biologists.</p>
+            <div class="tags">
+              <span class="tag">Longform</span>
+              <span class="tag">Data</span>
+              <span class="tag">Environment</span>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card" aria-labelledby="w2">
+            <h3 id="w2"><a href="#" target="_blank">Campus Composting: Small Steps, Big Impact</a></h3>
+            <div class="meta">Reporter — Wake Forest Student Paper • Apr 2024</div>
+            <p class="deck">A concise explainer and guide to campus composting systems, featuring interviews with sustainability staff and student coordinators.</p>
+            <div class="tags">
+              <span class="tag">Explainer</span>
+              <span class="tag">Sustainability</span>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card" aria-labelledby="w3">
+            <h3 id="w3"><a href="#" target="_blank">Audio: Mama’s House — Episode 4</a></h3>
+            <div class="meta">Producer / Storyteller — Podcast • Jan 2025</div>
+            <p class="deck">A produced audio feature exploring family migration stories; responsibilities included interview prep, editing, and sound design.</p>
+            <div class="tags">
+              <span class="tag">Audio</span>
+              <span class="tag">Narrative</span>
+            </div>
+          </article>
+
+          <!-- Card 4 (template) -->
+          <article class="card" aria-labelledby="w4">
+            <h3 id="w4"><a href="#" target="_blank">Data Viz: Stormwater on Campus</a></h3>
+            <div class="meta">Student project — Data class • Nov 2024</div>
+            <p class="deck">Interactive map and charts exploring stormwater runoff and campus infrastructure. Built with CSV data and D3 (repo linked in Projects).</p>
+            <div class="tags">
+              <span class="tag">Interactive</span>
+              <span class="tag">D3</span>
+              <span class="tag">Mapping</span>
+            </div>
+          </article>
+        </section>
+      </section>
+
+      <!-- Projects / Interactive -->
+      <section id="projects" aria-labelledby="projects-heading" class="projects">
+        <h2 id="projects-heading">Data & Projects</h2>
+        <p style="color:var(--muted)">Space for charts, embedded notebooks, and repo links. Example embeds or repo links should include alt text or transcripts where needed.</p>
+
+        <!-- Placeholder grid for embeds / links -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div style="background:#fff;padding:1rem;border-radius:8px;border:1px solid #eee;">
+            <h3 style="margin-top:0;font-size:1rem">Stormwater Dashboard (Demo)</h3>
+            <p class="meta">Interactive prototype — demo embed or link to GitHub</p>
+            <p class="deck">Embed charts via iframe or link to <a href="#" target="_blank">GitHub repo</a>. Include README and dataset licensing info.</p>
+          </div>
+
+          <div style="background:#fff;padding:1rem;border-radius:8px;border:1px solid #eee;">
+            <h3 style="margin-top:0;font-size:1rem">Multimedia: Short Doc</h3>
+            <p class="meta">Video / B-roll — hosted on Vimeo or your newsroom</p>
+            <p class="deck">Always provide captions/subtitles and transcript. Link to hosted player or to file with a transcript for accessibility.</p>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Resume + Contact -->
+      <section id="resume" aria-labelledby="resume-heading">
+        <h2 id="resume-heading">Resume</h2>
+
+        <div class="two-col">
+          <div style="background:var(--card);padding:1rem;border-radius:8px;">
+            <p class="meta">Download full resume (PDF)</p>
+            <!-- Replace with your real PDF link -->
+            <p><a class="button" href="resume.pdf" target="_blank" rel="noopener">Download resume (PDF)</a></p>
+
+            <h3>Key skills</h3>
+            <ul>
+              <li>Reporting & interviewing</li>
+              <li>Data visualization (D3, Tableau)</li>
+              <li>Audio production & editing</li>
+              <li>Multimedia storytelling</li>
+              <li>Python for data cleaning</li>
+            </ul>
+          </div>
+
+          <aside style="background:#fff;padding:1rem;border-radius:8px;border:1px solid #eee;">
+            <h3>Availability</h3>
+            <p class="meta">Open to freelance & collaboration</p>
+            <h3 id="contact">Contact</h3>
+            <p>Email: <a href="mailto:sheryl.zhang@example.com">sheryl.zhang@example.com</a></p>
+            <p>Social: <a href="https://twitter.com/example" target="_blank">Twitter</a> · <a href="https://linkedin.com/in/example" target="_blank">LinkedIn</a></p>
+          </aside>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div>
+        &copy; <span id="year"></span> Sheryl Zhang. Last updated: <time id="updated">2025-09-24</time>.
+      </div>
+
+      <div style="margin-top:.5rem;">
+        <strong>AI usage disclosure:</strong>
+        This page was built by me. I used generative AI for layout brainstorming, refactoring CSS, and creating placeholder microcopy (headlines and decks). All content, edits, and final decisions were reviewed and edited by me.
+      </div>
+
+      <div style="margin-top:.5rem; font-size:.85rem; color:var(--muted);">
+        <a href="#ai-log" style="color:var(--accent)">Open AI log (ai.doc)</a>
+      </div>
+
+      <!-- Hidden AI log on-page (so you can copy to ai.doc) -->
+      <section id="ai-log" style="margin-top:1rem;background:#fbfbfb;padding:.75rem;border-radius:6px;border:1px dashed #eee;">
+        <h3 style="margin:.25rem 0 .5rem 0">AI log (save as <code>ai.doc</code>)</h3>
+        <pre style="white-space:pre-wrap;font-size:.85rem;color:var(--muted);">[ai-log]
+Prompts & tools:
+- Prompt 1: "Generate a single-page journalism portfolio template HTML/CSS with accessible headings, work cards, projects, resume link, contact, and AI disclosure." — Tool: ChatGPT (user-guided)
+- Prompt 2: "Refactor CSS for responsive layout between 360px and 1200px; include visible focus outlines and color contrast." — Tool: ChatGPT
+- What I kept/changed: Kept the generated layout structure and semantics. Edited microcopy to reflect my actual clips and changed color variables to ensure contrast. Replaced placeholder images/links with my own assets (not included in AI output).</pre>
+      </section>
+    </footer>
+
+  </div>
+
+  <script>
+    // small script for dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // set updated date if you want runtime last-modified
+    // document.getElementById('updated').textContent = new Date().toISOString().slice(0,10);
+  </script>
+
+</body>
+</html>
